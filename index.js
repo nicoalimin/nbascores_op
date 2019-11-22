@@ -29,13 +29,13 @@ async function main() {
     return;
   }
 
-  const { blue, red } = ux.colors;
+  const { cyanBright, red } = ux.colors;
   console.log(red(`Games for ${getDateFormatted()}\n`));
   games.forEach(game => {
     console.log(
-      `${blue(game.vTeam.triCode)} ${game.vTeam.score} - ${
+      `${cyanBright(game.vTeam.triCode)} ${game.vTeam.score} - ${
         game.hTeam.score
-      } ${blue(game.hTeam.triCode)}`
+      } ${cyanBright(game.hTeam.triCode)}`
     );
   });
 }
