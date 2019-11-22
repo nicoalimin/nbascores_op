@@ -1,6 +1,6 @@
 version: "1"
 commands:
-  - name: nbascores:1.0.1
+  - name: nbascores:1.0.2
     description: Obtaining NBA scores today
     public: true
     sourceCodeURL: ""
