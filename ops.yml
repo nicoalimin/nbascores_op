@@ -1,0 +1,13 @@
+version: "1"
+commands:
+  - name: nbascores:1.0.1
+    description: Obtaining NBA scores today
+    public: true
+    sourceCodeURL: ""
+    run: node index.js
+    env:
+      - "USER=world"
+      - "OPS_ACCESS_TOKEN"
+      - "OPS_ENV_VAR=$HOST_ENV_VAR"
+    help:
+      usage: "Returning today's NBA scores"
