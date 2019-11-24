@@ -3,7 +3,7 @@ commands:
   - name: nbascores:1.0.3
     description: Obtaining NBA scores today
     public: true
-    sourceCodeURL: ""
+    sourceCodeURL: "https://github.com/nicoalimin/nbascores_op.git"
     run: ./node_modules/.bin/babel-node src/index.js
     env:
       - "USER=world"
