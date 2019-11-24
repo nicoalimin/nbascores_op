@@ -4,7 +4,7 @@ commands:
     description: Obtaining NBA scores today
     public: true
     sourceCodeURL: "https://github.com/nicoalimin/nbascores_op.git"
-    run: ./node_modules/.bin/babel-node src/index.js
+    run: npm start
     env:
       - "USER=world"
       - "OPS_ACCESS_TOKEN"

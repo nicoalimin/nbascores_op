@@ -4,8 +4,7 @@
   "description": "Obtaining NBA scores today",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src -d lib",
-    "start": "npx -p @babel/core -p @babel/node babel-node src/index.js",
+    "start": "node_modules/.bin/tsc src/index.ts --esModuleInterop --outDir ./lib && node lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,10 +17,6 @@
     "moment": "^2.24.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "@babel/preset-typescript": "^7.7.4",
     "mem": ">=4.0.0",
     "typescript": "^3.7.2"
   }

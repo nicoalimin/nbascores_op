@@ -7,10 +7,7 @@ WORKDIR /ops
 
 RUN apk add python make
 ADD package.json .
-RUN npm install && \
-npm i @babel/core && \
-npm i @babel/node && \
-npm i babel-node
+RUN npm install
 
 ADD . .
 
