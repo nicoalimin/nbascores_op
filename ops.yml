@@ -1,6 +1,6 @@
 version: "1"
 commands:
-  - name: nbascores:1.0.3
+  - name: nbascores:1.0.4
     description: Obtaining NBA scores today
     public: true
     sourceCodeURL: "https://github.com/nicoalimin/nbascores_op.git"
