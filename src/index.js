@@ -2,7 +2,7 @@ import axios from "axios";
 import moment from "moment";
 import { ux } from "@cto.ai/sdk";
 
-const getDateNba = () => {
+const getDateNBAFormat = () => {
   const date = moment()
     .subtract(8, "hours")
     .format("YYYYMMDD");
@@ -17,13 +17,17 @@ const getDateFormatted = () => {
 };
 
 async function main() {
-  const date = getDateNba();
+  const date = getDateNBAFormat();
   const teamsToday = await axios.get(
     `http://data.nba.net/10s/prod/v1/${date}/scoreboard.json`
   );
-  if (!teamsToday) return;
-  const games = teamsToday.data.games;
 
+  if (!teamsToday || !teamsToday.data) {
+    console.log("Error in getting teams today");
+    return;
+  }
+
+  const games = teamsToday.data.games;
   if (!games) {
     console.log(`No games for ${getDateFormatted()}`);
     return;
@@ -31,6 +35,7 @@ async function main() {
 
   const { cyanBright, red } = ux.colors;
   console.log(red(`Games for ${getDateFormatted()}\n`));
+
   games.forEach(game => {
     console.log(
       `${cyanBright(game.vTeam.triCode)} ${game.vTeam.score} - ${
