@@ -1,10 +1,10 @@
 version: "1"
 commands:
-  - name: nbascores:1.0.2
+  - name: nbascores:1.0.3
     description: Obtaining NBA scores today
     public: true
     sourceCodeURL: ""
-    run: node index.js
+    run: ./node_modules/.bin/babel-node src/index.js
     env:
       - "USER=world"
       - "OPS_ACCESS_TOKEN"

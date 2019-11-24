@@ -1,6 +1,6 @@
-const axios = require("axios");
-const moment = require("moment");
-const { ux } = require("@cto.ai/sdk");
+import axios from "axios";
+import moment from "moment";
+import { ux } from "@cto.ai/sdk";
 
 const getDateNba = () => {
   const date = moment()
